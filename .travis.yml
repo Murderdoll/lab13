@@ -16,10 +16,10 @@ matrix:
           packages: ['g++-7']
       env: CXX_EVAL="g++-7" CC_EVAL="gcc-7" BUILD_TYPE='Release'
 
-script:
-- cmake -H. -B_build 
+script:   
+- cmake -H. -B_build
 - cmake --build _build
 - cd _build
-- ./pack config.yaml
-- cat config.yaml
-- ./unpack config.yaml
+- ./pack file.json
+- cat file.json
+- ./unpack file.json
