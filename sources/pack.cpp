@@ -23,10 +23,9 @@ struct Person {
 
 Person getInfo() {
 	class Person file;
-  file.first_name = "AAAAAA";
+  file.first_name = "Artem";
 	file.last_name = "B";
-	file.email.nickname = "artem765";
-  file.email.server = "@inbox.ru";
+	file.email.nickname = "artem765@inbox.ru";
 	file.age = 19;
 	file.phone = "8(800)555-35-35";
 	return file;
@@ -37,7 +36,7 @@ int main(int argc, char* argv[]) {
   string Path = argv[1];
   Person Pers;
   ofstream fout(Path);
-cout << "-------------------------------------" << endl;
+/*cout << "-------------------------------------" << endl;
 cout <<"First name:" << endl;
 cin >> Pers.first_name;
 cout <<"Last name:" << endl;
@@ -49,11 +48,12 @@ cin >> Pers.age;
 cout <<"Phone:" << endl;
 cin >> Pers.phone;
 cout << "-------------------------------------" << endl;
+*/
+Pers = getInfo();
   json j;
   j["first_name"] = Pers.first_name;
   j["last_name"] = Pers.last_name;
   j["email_nickname"] = Pers.email.nickname;
-  j["email_server"] = Pers.email.server;
   j["age"] = Pers.age;
   j["phone"] = Pers.phone;
   fout << j;
