@@ -11,8 +11,8 @@ addons:
       - cmake-data
 
 script:
--cmake -H. -B_builds
--cmake --build _builds
+- cmake -H. -B_builds
+- cmake --build _builds
 - cd _builds
 - ./pack person1.yml
 - cat person1.yml
