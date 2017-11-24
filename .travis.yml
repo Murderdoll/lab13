@@ -1,9 +1,7 @@
-sudo: true
-language: cpp
-compiler: gcc
-    env:
-      - COMPILER=g++-4.9
-      - CMAKE_OPTIONS=-DJSON_NoExceptions=ON
+
+ - os: linux
+    compiler: gcc
+    env: COMPILER=g++-6
 addons:
   apt:
     sources:
