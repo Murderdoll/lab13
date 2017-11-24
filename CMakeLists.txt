@@ -12,7 +12,7 @@ HunterGate(
     SHA1 "15c719a00df4e4506e1b552e25d6027d6ba61fbb"
 )
 
-project(pack)
+project(pack VERSION 2.1.1 LANGUAGES CXX)
 hunter_add_package(nlohmann_json)
 find_package(nlohmann_json CONFIG REQUIRED)
 
