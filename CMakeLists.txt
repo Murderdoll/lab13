@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.2.2)
 
 
-set(CMAKE_CXX_COMPILER x86_64-pc-linux-gnu-g++)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_COMPILER "g++-7")
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(cmake/HunterGate.cmake)
