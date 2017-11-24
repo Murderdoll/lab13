@@ -1,14 +1,20 @@
-sudo: true
 language: cpp
-compiler: gcc
+sudo: false
 
-addons:
-  apt:
-    sources:
-      - george-edison55-precise-backports
-    packages:
-      - cmake
-      - cmake-data
+notifications:
+  email: false
+
+matrix:
+  include:
+
+    # Linux C++14 GCC builds
+    - os: linux
+      compiler: gcc
+      addons: &gcc7
+        apt:
+          sources: ['ubuntu-toolchain-r-test']
+          packages: ['g++-7']
+      env: CXX_EVAL="g++-7" CC_EVAL="gcc-7" BUILD_TYPE='Release'
 
 script:
 - cmake -H. -B_build 
